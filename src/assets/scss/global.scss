@@ -1,0 +1,55 @@
+@import 'src/assets/scss/main';
+
+:root {
+  --x5-offline-alert-height: 0;
+
+  // Смещение основного контента относительно верхней динамической области: алерты, баннеры, статусы и т.д.
+  // calc(var(--x5-offline-alert-height) + var(--banner-height) + var(--status-height) + etc.)
+  --x5-header-offset: var(--x5-offline-alert-height);
+}
+
+html,
+body {
+  ::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+button,
+[role='button'] {
+  outline: none;
+
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: none;
+  }
+}
+
+/*------BOTTOM SHEET CUSTOMIZATION START-----------*/
+/*-----react-spring-bottom-sheet/dist/style.css----*/
+/* stylelint-disable */
+div[data-rsbs-backdrop] {
+  z-index: $modalSideSheetIndex;
+}
+
+div[data-rsbs-overlay] {
+  z-index: $modalDialogIndex;
+  height: var(--rsbs-overlay-h);
+  max-height: calc(100vh - var(--x5-header-offset));
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/*------BOTTOM SHEET CUSTOMIZATION END-------------*/

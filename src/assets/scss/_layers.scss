@@ -1,0 +1,10 @@
+$appHeaderIndex: 10; /* Заголовок приложения с навигацией */
+$bellNotificationIndex: 10;
+$tabsWrapperIndex: $appHeaderIndex + 1; /* Табы */
+$tabPanelHeaderIndex: $tabsWrapperIndex + 1; /* Заголовок панели внутри таба */
+$tooltipIndex: $tabPanelHeaderIndex + 2;
+
+$modalSideSheetIndex: 16; /* Подложка модалки/боттомшита */
+$modalDialogIndex: 24; /* Компонент диалогового окна/боттомшит */
+
+$offlineAlertIndex: 1500;
